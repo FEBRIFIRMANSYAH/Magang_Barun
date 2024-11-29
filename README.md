@@ -361,9 +361,39 @@ Sistem ini terdiri dari **11 komponen utama**, yang masing-masing memiliki fungs
 # Magang Electrical Design
 ## Schematics Design
 ![Schematics](/images/Shematics.png)
+Boost Converter:
+### Cara kerja
+- Rangkaian ini menaikkan tegangan dari 5V menjadi 12V.
+- Komponen utama yang bekerja di sini adalah IC LM2577, induktor, dioda, resistor, dan kapasitor.
+- Induktor menyimpan energi, dioda mengalirkan arus ke output, dan kapasitor menjaga tegangan agar stabil.
+  
+### Bagian Utama Rangkaian:
+
+- Input (J2): Masukan tegangan 5V.
+- Induktor (L1): Komponen ini menyimpan dan melepaskan energi untuk menaikkan tegangan.
+- IC LM2577: Mengontrol proses menaikkan tegangan dengan mengatur switching.
+- Dioda (D1): Mengarahkan arus dari induktor ke kapasitor dan beban.
+- Kapasitor Output (C3): Menjaga tegangan output tetap stabil.
+- Resistor (R1 & R3): Mengatur nilai tegangan output melalui pin feedback (FB) di IC.
+
+- Output (J1): Tegangan yang dihasilkan adalah 12V, yang bisa digunakan untuk memberi daya ke perangkat lain.
+  
+### Daftar Komponen:
+- IC LM2577 - Mengatur proses boost (menaikkan tegangan).
+- Induktor L1 (100 µH) - Menyimpan energi.
+- Dioda D1 (1N5821) - Mengalirkan arus ke output dengan efisiensi tinggi.
+Resistor:
+- R1 (17.4 kΩ) dan R3 (2 kΩ) - Untuk mengatur tegangan output.
+- R4 (2.2 kΩ) - Untuk pengaturan internal IC.
+Kapasitor:
+- C1 (0.1 µF) - Menstabilkan masukan.
+- C2 (0.33 µF) - Membantu kestabilan rangkaian.
+- C3 (680 µF) - Menstabilkan tegangan output.
+- Konektor J1 dan J2 - Untuk menghubungkan input dan output.
+
 
 ## PCB Layout
 ![PCB Layout](/images/PCBlayout.png)
-
+###  PCB tersebut menggunakan 2 layer
 ## 3D Print Out
 ![3D Print](/images/3Dlayout.png)
